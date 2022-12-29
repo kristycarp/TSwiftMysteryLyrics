@@ -1,5 +1,4 @@
 # Taylor Swift Mystery Lyrics Quiz
-## Created by Kristy Carpenter
 
 Taking inspiration from the numerous Sporcle quizzes that follow this format, I have created a script that will randomly pick a Taylor Swift song for you to guess the lyrics to. As you guess words, any correct guesses will be filled in. You have 10 minutes to try to guess all the lyrics to the mystery song.
 
