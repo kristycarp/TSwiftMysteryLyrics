@@ -10,7 +10,7 @@ def process_lyrics(lyrics):
     lines = lyrics.split("\n")
     lyrics = ""
     for line in lines:
-        if len(line) > 0 and not line[0] == "[":
+        if len(line) > 0 and not (line[0] == "[" or line[-1] == "]"):
             lyrics += line + "\n"
     return lyrics.split()
     
@@ -84,6 +84,9 @@ def main():
         print("Guess a word:")
 
         guess = input()
+        if guess == "QUIT":
+            print("you quit.")
+            break
         clean_guess = clean_word(guess)
 
         if clean_guess in dic.keys() and not dic[clean_guess]["guessed"]:
@@ -97,8 +100,8 @@ def main():
         elapsed = round(time.time() - start)
         print("You win! Time to finish: %s" % pretty_time(elapsed))
     else:
-        print("You lose... the song was %s" % title)
         print(" ".join(lyrics))
+        print("You lose... the song was %s" % title)
 
 
 if __name__ == "__main__":
