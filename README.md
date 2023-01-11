@@ -10,3 +10,5 @@ This is a work in progress and may have some bugs. Please feel free to let me kn
 This script requires the `pandas` library.
 
 Start the game with `python play.py`. You may then type your guesses. Each guess should only be one word. Guesses are case-insensitive and do not require punctuation.
+
+test test
